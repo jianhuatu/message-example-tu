@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<textarea id="receive" style="width:300px;height:300px;"></textarea></br>
+<input type="text" id="content">
+<button id="send2">发送</button>
+<script>
+document.getElementById("send2").addEventListener("click",function(){
+	var value = document.getElementById("content").value;
+	document.getElementById("content").value = "";
+	window.parent.postMessage(value,"*");
+},false);
+
+onmessage = function(msg){
+	if(msg.origin!=="http://localhost")return false;
+ 	document.getElementById("receive").value+=('\r\n'+msg.data);
+}
+</script>
+</html>

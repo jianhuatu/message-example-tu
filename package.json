@@ -1,0 +1,23 @@
+{
+  "name": "message-example-tu",
+  "version": "1.0.0",
+  "description": "js message相关实例",
+  "Keywords": ["BroadcastChannel","MessageChannel","postMessage"],
+  "Homepage": "xuexi.tutcw.com",
+  "author": {
+    "name" : "土建华"
+  },
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "Repository": {
+    "type": "git",
+    "url": "https://github.com/jianhuatu/message-example-tu.git"
+  },
+  "Bugs": {
+    "url" : "https://github.com/jianhuatu/message-example-tu/issues",
+    "email" : "tujianhua123@yeah.net"
+  },
+}

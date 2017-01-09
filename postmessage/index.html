@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<textarea id="receive" style="width:300px;height:300px;"></textarea></br>
+<input type="text" id="content">
+<button id="send1">发送</button>
+<iframe src="http://127.0.0.1/message/postmessage/index2.html" width="400px" height="400px" scrolling=false frameborder=false name="index2"></iframe>
+<script>
+	document.getElementById("send1").addEventListener("click",function(){
+		var value = document.getElementById("content").value;
+		document.getElementById("content").value = "";
+		document.index2.postMessage(value,"http://127.0.0.1");
+	},false);
+	onmessage = function(msg){
+	 	document.getElementById("receive").value+=('\r\n'+msg.data);
+	}
+</script>
+</html>
