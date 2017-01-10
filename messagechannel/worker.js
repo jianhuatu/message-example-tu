@@ -9,13 +9,19 @@ var checkPort1 = false;
 var checkPort2 = false;
 
 var createPort1 = function(port){
-	if(checkPort1)createNewChannel();
+	if(checkPort1){
+       createNewChannel();
+       return false;
+    }
 	port.postMessage({type:"createPort1",port1:port1},[port1]);
 	checkPort1 = true;
 }
 
 var createPort2 = function(port){
-	if(checkPort2)createNewChannel();
+	if(checkPort2){
+       createNewChannel();
+       return false;
+    }
 	port.postMessage({type:"createPort2",port2:port2},[port2]);
 	checkPort2 = true;
 }
